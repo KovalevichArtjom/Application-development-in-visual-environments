@@ -5,7 +5,11 @@
     xmlns:local="using:Laboratory_Work_One"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="400">
+    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    mc:Ignorable="d" 
+    Width="356"
+    Height="270"
+    >
 
     <Grid Background="#FF1C1C1E"
           FocusVisualPrimaryBrush="#FFFAB81B"
@@ -27,6 +31,9 @@
                     />
                 <TextBox 
                     x:Name="XTextBox"
+                    Text="{Binding VariableXTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
                     Style="{StaticResource BaseStyleTextBox}"
                     />
             </StackPanel>
@@ -43,6 +50,9 @@
                     />
                 <TextBox 
                     x:Name="YTextBox"
+                    Text="{Binding VariableYTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
                     Style="{StaticResource BaseStyleTextBox}"
                     />
             </StackPanel>
@@ -59,13 +69,17 @@
                     />
                 <TextBox 
                     x:Name="ZTextBox"
+                    Text="{Binding VariableZTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
                     Style="{StaticResource BaseStyleTextBox}"
                     />
             </StackPanel>
 
-            <RichEditBox 
-                Height="150"
-                IsEnabled="False"
+            <TextBlock 
+                Text="{Binding ResulctCalcTextBlock, Mode=TwoWay}"
+                Margin="0, 20"
+                Style="{StaticResource MessageStyleTextBlock}"
                 />
         </StackPanel>
     </Grid>
