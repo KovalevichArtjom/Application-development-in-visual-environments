@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="Laboratory_Work_One.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Laboratory_Work_One"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="400">
+
+    <Grid Background="#FF1C1C1E"
+          FocusVisualPrimaryBrush="#FFFAB81B"
+          >
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="10, 20"
+                    >
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    x:Name="XTextBlock"
+                    Text="Enter value X:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="XTextBox"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    x:Name="YTextBlock"
+                    Text="Enter value Y:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="YTextBox"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    x:Name="ZTextBlock"
+                    Text="Enter value Z:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="ZTextBox"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    />
+            </StackPanel>
+
+            <RichEditBox 
+                Height="150"
+                IsEnabled="False"
+                />
+        </StackPanel>
+    </Grid>
+</Page>
