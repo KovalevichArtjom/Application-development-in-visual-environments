@@ -1,0 +1,138 @@
+﻿<Page
+    x:Class="Laboratory_Work_Two.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Laboratory_Work_Two"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    Width="500"
+    Height="400"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF1C1C1E"
+          FocusVisualPrimaryBrush="#FFFAB81B"
+          >
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="10, 20"
+                    >
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    x:Name="XTextBlock"
+                    Text="Enter value X:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="XTextBox"
+                    Text="{Binding VariableXTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    x:Name="YTextBlock"
+                    Text="Enter value Y:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="YTextBox"
+                    Text="{Binding VariableYTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    x:Name="ZTextBlock"
+                    Text="Enter value Z:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="ZTextBox"
+                    Text="{Binding VariableZTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="10, 20"
+                    >
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <CheckBox 
+                    x:Name="MaxAbsCheckBox"
+                    Content="Maxabs"
+                    FlowDirection="RightToLeft"
+                    IsChecked="{Binding MaxAbsChecked, Mode=TwoWay}"
+                    />
+            </StackPanel>
+            <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <RadioButton 
+                    x:Name="FirstFunctionRadioButton"
+                    Content="sh(x)"
+                    GroupName="Function"
+                    Tag="First"
+                    IsChecked="{Binding FirstFunctionChecked, Mode=TwoWay}"
+                    />
+                <RadioButton 
+                    x:Name="SecondFunctionRadioButton"
+                    Content="Pow(x, 2)"
+                    GroupName="Function"
+                    Tag="Second"
+                    IsChecked="{Binding SecondFunctionChecked, Mode=TwoWay}"
+                    />
+                <RadioButton 
+                    x:Name="ThirdFunctionRadioButton"
+                    Content="Pow(e, 2)"
+                    GroupName="Function"
+                    Tag="Triple"
+                    IsChecked="{Binding ThirdFunctionChecked, Mode=TwoWay}"
+                    />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="10, 20"
+                    >
+            <TextBlock 
+                Height="140"
+                Width="450"
+                Margin="0, 20"
+                Style="{StaticResource MessageStyleTextBlock}"
+                Text="{Binding ResulctCalcTextBlock, Mode=TwoWay}"
+                />
+        </StackPanel>
+    </Grid>
+</Page>
