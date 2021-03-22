@@ -50,8 +50,7 @@ namespace Laboratory_Work_Two.Models
             switch (functionType)
             {
                 case FunctionType.Fist:
-                    //TODO: Math.Asinh not found
-                    overrideX = Math.Asin(x);
+                    overrideX = Asinh(x);
                     break;
                 case FunctionType.Second:
                     overrideX = Math.Pow(x, 2);
@@ -75,6 +74,11 @@ namespace Laboratory_Work_Two.Models
             }
 
             return Calc(x, y, z, functionType);
+        }
+
+        double Asinh(double x)
+        {
+            return Math.Log(x + Math.Sqrt(x * x + 1));
         }
     }
 }
