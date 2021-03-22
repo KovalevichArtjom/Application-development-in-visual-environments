@@ -31,12 +31,17 @@ namespace Laboratory_Work_Two.Models
             double[] varCollection = { x, y, z };
             MaxVaribale = varCollection.Max();
 
-            double FirstUp = 1 + Math.Pow(Math.Sin(x + y), 2);
-            double FirstDown = Math.Abs(x - (2 * y) / (1 + Math.Pow(x, 2) * Math.Pow(y, 2)));
-            double First = (FirstUp / FirstDown) * Math.Pow(x, Math.Abs(y));
-            double Second = Math.Cos(Math.Atan(1 / z));
+            double condition = x - y;
+            double res = 0;
 
-            return First + Second;
+            if (condition == 0)
+                res = Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Sin(y);
+            else if (condition > 0)
+                res = Math.Pow((x - y), 2) + Math.Cos(y);
+            else if (condition < 0)
+                res = Math.Pow((y - x), 2) + Math.Tan(y);
+
+            return res;
         }
         
         public double Calc(double x, double y, double z, FunctionType functionType)
