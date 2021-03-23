@@ -120,11 +120,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\ModelBase.cs" />
+    <Compile Include="Interfaces\IResultCalculaction.cs" />
     <Compile Include="Interfaces\ViewModelBase.cs" />
+    <Compile Include="Models\ResultCalculaction.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Models\Pages\MainModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>

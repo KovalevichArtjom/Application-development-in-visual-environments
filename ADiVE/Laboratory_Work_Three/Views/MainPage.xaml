@@ -6,11 +6,137 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
-    Width="500"
-    Height="400"
+    Width="650"
+    Height="500"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid Background="#FF1C1C1E"
+          FocusVisualPrimaryBrush="#FFFAB81B"
+          >
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="10, 20"
+                    >
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    Text="Enter value Xn:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="XnTextBox"
+                    Text="{Binding VariableXnTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    IsEnabled="{Binding VariableXnEnabled, Mode=TwoWay}"
+                    />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    Text="Enter value Xk:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="XkTextBox"
+                    Text="{Binding VariableXkTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    IsEnabled="{Binding VariableXkEnabled, Mode=TwoWay}"
+                    />
+            </StackPanel>
+        </StackPanel>
 
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="10, 20"
+                    >
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    Text="Enter value N:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="NTextBox"
+                    Text="{Binding VariableNTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    IsEnabled="{Binding VariableNEnabled, Mode=TwoWay}"
+                    />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BaseStyleStackPanel}"
+                    >
+                <TextBlock 
+                    Text="Enter value H:"
+                    Style="{StaticResource BaseStyleTextBlock}"
+                    />
+                <TextBox 
+                    x:Name="HTextBox"
+                    Text="{Binding VariableHTextBox, Mode=TwoWay}"
+                    extensions:TextBoxRegex.ValidationType="Decimal"
+                    extensions:TextBoxRegex.ValidationMode="Forced"
+                    Style="{StaticResource BaseStyleTextBox}"
+                    IsEnabled="{Binding VariableHEnabled, Mode=TwoWay}"
+                    />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="left"
+                    VerticalAlignment="Bottom"
+                    Margin="10, 20"
+                    >
+            <TextBlock 
+                Height="300"
+                Width="200"
+                Margin="0, 20"
+                Style="{StaticResource MessageStyleTextBlock}"
+                Text="{Binding ValueXTextBlock, Mode=TwoWay}"
+                />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="10, 20"
+                    >
+            <TextBlock 
+                Height="300"
+                Width="200"
+                Margin="0, 20"
+                Style="{StaticResource MessageStyleTextBlock}"
+                Text="{Binding ValueYTextBlock, Mode=TwoWay}"
+                />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="10, 20"
+                    >
+            <TextBlock 
+                Height="300"
+                Width="200"
+                Margin="0, 20"
+                Style="{StaticResource MessageStyleTextBlock}"
+                Text="{Binding ResulctCalculationFunctionTextBlock, Mode=TwoWay}"
+                />
+        </StackPanel>
     </Grid>
 </Page>
